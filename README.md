@@ -1,3 +1,24 @@
+usersテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|user_id,name,mail|string|null: false, foreign_key: true|
+
+
+### Association
+- has_many :comments
+
+
+groupsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|user_id,name,mail|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+
+### Association
+- has_many :comments
+
 
 groups_usersテーブル
 
@@ -9,13 +30,12 @@ groups_usersテーブル
 ### Association
 - has_many :comments
 
-massegesテーブル
+
+messageテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id,body,image|integer,string|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|body,image,group_id,user_id|text,string,integer,integer|null|
 
 ### Association
-- belongs_to :group
-- belongs_to :user
+- has_many :comments
