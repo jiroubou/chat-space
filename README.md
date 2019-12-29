@@ -2,41 +2,40 @@ usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id,name,mail|string|null: false, foreign_key: true|
+|name|string|null: false|
 
 
 ### Association
-- has_many :comments
+- has_many :groups_users
+- has_many :users, through: :groups_users
 
 
 groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id,name,mail|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|name|integer|null: false, foreign_key: true|
 
 ### Association
-- has_many :comments
-
+- has_many :groups_users
+- has_many :users, through: :groups_users
 
 groups_usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id,name,mail,role|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|name,role,users_id,groups_id|integer|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
-- belongs_to :groups
+- belongs_to :group
 
 
 messageテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|body,image,group_id,user_id|text,string,integer,integer|null|
+|body,images、comments|text,string,integer|null|
 
 ### Association
 - has_many :comments
