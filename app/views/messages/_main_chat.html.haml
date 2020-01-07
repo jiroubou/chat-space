@@ -1,0 +1,39 @@
+.main
+  .main__chat
+    .main__left-box
+      .groups test
+      .id
+        .id__left-id member: 
+        .id__right-id jiro
+    .main__right-box
+      = link_to "Edit","#"
+  
+  .main__list
+    .main__list__next
+      .listo
+        ジロウ 
+      .listoo
+        2020/1/1
+    .main__list__nexts
+      .lis
+        おはようございます
+    
+    .main__list__next
+      .listo
+        ジロウ 
+      .listoo
+        2020/1/1
+    .main__list__nexts
+      .lis
+        おはようございます
+
+  .main__bar
+    .main__bar__big
+      .bigs
+        .big2
+          .gyazo
+            %label{class: "input-box__image"}
+              = icon('fas', 'image')
+              %input{type: "file"}
+      .right-right
+        = link_to "Send","#"
