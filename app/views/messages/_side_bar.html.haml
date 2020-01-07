@@ -1,0 +1,30 @@
+.side
+  .side__bar
+    .side__bar__box
+      .name 名前
+      .icons
+        .icons__left 
+          .left 
+            = link_to "#", class: "left_btn" do
+              = icon('fas', 'edit')
+        .icons__right
+          .right 
+            = link_to "#", class: "right_btn" do
+              = icon('fas', 'cog')
+  .side__list
+    .side__list__in
+      =link_to "#",class:"lists" do
+        %p.lists__group-name
+          test
+        %p.lists__test-message
+          まだメッセージはありません
+
+        %p.lists__group-name
+          test
+        %p.lists__test-message
+          まだメッセージはありません
+
+        %p.lists__group-name
+          test
+        %p.lists__test-message
+          まだメッセージはありません

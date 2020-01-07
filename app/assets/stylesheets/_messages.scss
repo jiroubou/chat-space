@@ -1,0 +1,217 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper{
+  display: flex;
+  height: 100vh;
+  
+  .side{
+    float: left;
+
+    &__bar {
+      background-color: #253141;
+      height: 100px;
+      width: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+        
+        &__box{
+          height: 20px;
+          width: 260px;
+          margin-left: 20px;
+          margin-right: 20px;
+          display: flex;
+          justify-content: space-between;
+          
+          .name {
+            font-size: 16px;
+            color: #ffffff;
+          }
+          
+          .icons{
+            width: 60px;
+            height: 20px;
+            background-color: #253141;
+            display: flex;
+            justify-content: flex-end;
+            text-decoration: none;
+            &__left{
+              height: 20px;
+              
+              .left{
+                background-color: #253141;
+                i {
+                  color: #ffffff;
+                  margin-right: 5px;
+                }
+              }
+            }
+          
+            
+            &__right{
+              height: 20px;
+              
+              .right{
+                background-color: #253141;
+                i {
+                  color: #ffffff;
+                }
+              }
+            }
+          }
+          } 
+        }
+    
+    
+    &__list {
+      background-color: #2f3e51;
+      height: calc(100vh - 100px);
+
+      &__in{
+        padding: 20px;
+        .lists{
+          color: white;
+          text-decoration: none;
+
+          &__group-name {
+            font-size: 15px;
+            margin-bottom: 5px;
+          }
+          &__test-message {
+          font-size: 11px;
+          margin-bottom: 40px;
+          }
+        }
+      }  
+    }
+  }
+
+
+
+
+  .main {
+    float: right;
+    
+    &__chat {
+      background-color: #ffffff;
+      height: 100px;
+      border-bottom: solid 1px #eeeeee;
+      width: calc(100vw - 300px);
+      display: flex;
+      justify-content: space-between;
+    }
+      &__left-box {
+        margin-left: 40px;
+        margin-top: 35px;
+        
+        .groups{
+          color: #333333;
+          font-size: 20px;
+          margin-bottom: 15px;
+        }
+
+        .id{
+          font-size: 12px;
+          display: flex;
+          &__left-id{
+            color: #999999;
+          }
+          &__right-id{
+            color: #999999;
+          }
+        }
+      }
+      &__right-box {
+        color: #38aef0;
+        font-size: 16px;
+        width: 72px;
+        height: 40px;
+        line-height: 40px;
+        border: solid 1px #38aef0;
+        margin-right: 40px;
+        margin-top: 28px;
+        padding: 0px 20px;
+      
+    }
+
+    &__list {
+      background-color: #fafafa;
+      height: calc(100vh - 190px);
+      width: calc(100vw - 300px);
+      padding-top: 35px;
+      padding-left: 40px;
+
+      &__next{
+        display: flex;
+        margin-bottom: 12px;
+        .listo {
+          color: #333333;
+          font-size: 16px;
+        }
+        .listoo {
+          color: #999999;
+          font-size: 12px;
+        }
+      }
+
+      &__nexts{
+        margin-bottom: 46px;
+          .lis {
+            color: #454a54;
+            font-size: 14px;
+          }
+      }
+    }
+
+    &__bar {
+      background-color: #d2d2d2;
+      height: 90px;
+      width: calc(100vw - 300px);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      &__big {
+        height: 50px;
+        width: 673px;
+        display: flex;
+        
+      }
+        .bigs {
+          height: 50px;
+          width: 558px;
+          background-color: white;
+          position: relative; 
+        }
+          .big2 {
+            height: 50px;
+            width: 100%;
+            
+            padding: 0 40px 0 10px;
+          }
+            .gyazo{
+              font-size: 1.3rem;
+              position: absolute;
+              right: 10px;
+              padding-top: 10px;
+                input{
+                  display: none;
+                }
+            }
+           
+        .right-right {
+          height: 50px;
+          width: 100px;
+          background-color: #38aef0;
+          color: white;
+          margin-left: 15px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        
+    }
+  }
+}
