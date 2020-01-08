@@ -2,6 +2,7 @@
   .side__bar
     .side__bar__box
       .name 名前
+      = current_user.name
       .icons
         .icons__left 
           .left 
@@ -9,8 +10,8 @@
               = icon('fas', 'edit')
         .icons__right
           .right 
-            = link_to "#", class: "right_btn" do
-              = icon('fas', 'cog')
+            = link_to edit_user_path(current_user) do
+              = icon('fas', 'cog', class: 'icon')
   .side__list
     .side__list__in
       =link_to "#",class:"lists" do
