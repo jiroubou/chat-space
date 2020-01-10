@@ -4,28 +4,20 @@
       .name 名前
       = current_user.name
       .icons
-        .icons__left 
-          .left 
-            = link_to "#", class: "left_btn" do
-              = icon('fas', 'edit')
-        .icons__right
-          .right 
-            = link_to edit_user_path(current_user) do
-              = icon('fas', 'cog', class: 'icon')
+        = link_to new_group_path do
+          .icons__left 
+            .left 
+              = link_to new_group_path, class: "left_btn" do
+                = icon('fas', 'edit')
+          .icons__right
+            .right 
+              = link_to edit_user_path(current_user) do
+                = icon('fas', 'cog', class: 'icon')
   .side__list
-    .side__list__in
-      =link_to "#",class:"lists" do
-        %p.lists__group-name
-          test
-        %p.lists__test-message
-          まだメッセージはありません
-
-        %p.lists__group-name
-          test
-        %p.lists__test-message
-          まだメッセージはありません
-
-        %p.lists__group-name
-          test
-        %p.lists__test-message
-          まだメッセージはありません
+    - current_user.groups.each do |s|
+      .side__list__in
+        = link_to '#', class: 'lists' do
+          .lists__name
+            = s.name
+          .lists__message
+            メッセージはまだない

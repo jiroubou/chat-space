@@ -75,12 +75,13 @@
           color: white;
           text-decoration: none;
 
-          &__group-name {
+          &__name {
             font-size: 15px;
             margin-bottom: 5px;
+            font-weight: bold;
           }
-          &__test-message {
-          font-size: 11px;
+          &__message {
+          font-size: 10px;
           margin-bottom: 40px;
           }
         }
