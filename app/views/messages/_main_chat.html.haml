@@ -8,32 +8,26 @@
     .main__right-box
       = link_to "Edit","#"
   
-  .main__list
-    .main__list__next
-      .listo
-        ジロウ 
-      .listoo
-        2020/1/1
-    .main__list__nexts
-      .lis
-        おはようございます
-    
-    .main__list__next
-      .listo
-        ジロウ 
-      .listoo
-        2020/1/1
-    .main__list__nexts
-      .lis
-        おはようございます
-
+  .messages
+  = render @messages
+  
   .main__bar
-    .main__bar__big
-      .bigs
-        .big2
-          .gyazo
-            %label{class: "input-box__image"}
-              = icon('fas', 'image')
-              %input{type: "file"}
-      .right-right
-        = link_to "Send","#"
+    .form
+      = form_for [@group, @message] do |f|
+        .bigs
+          = f.text_field :content, class: 'bigs__message', placeholder: 'type a message'
+          .bigs__mask
+            = f.label :image, class: 'bigs__mask__image' do
+              = icon('fas', 'image', class: 'icon')
+              = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
+
+    -# .form
+      -# = form_for [@group, @message] do |f|
+      -#   bigs
+      -#     = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+      -#     .form__mask
+      -#       = f.label :image, class: 'form__mask__image' do
+      -#         = icon('fas', 'image', class: 'icon')
+      -#         = f.file_field :image, class: 'hidden'
+      -#   = f.submit 'Send', class: 'form__submit'

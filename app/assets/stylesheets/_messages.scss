@@ -174,35 +174,34 @@
       justify-content: space-around;
       align-items: center;
 
-      &__big {
+      .form {
         height: 50px;
         width: 90%;
         display: flex;
         
-      }
         .bigs {
           height: 50px;
           width: 100%;
           background-color: white;
           position: relative; 
-        }
-          .big2 {
+
+          &__message {
             height: 50px;
             width: 100%;
-            
             padding: 0 40px 0 10px;
           }
-            .gyazo{
-              font-size: 1.3rem;
-              position: absolute;
-              right: 10px;
-              padding-top: 10px;
-                input{
-                  display: none;
-                }
+          &__mask{
+            font-size: 1.3rem;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            .hidden{
+              display: none;
             }
+          }
+        }
            
-        .right-right {
+        &__submit {
           height: 50px;
           width: 100px;
           background-color: #38aef0;
@@ -212,7 +211,7 @@
           justify-content: center;
           align-items: center;
         }
-        
+      }
     }
   }
 }
