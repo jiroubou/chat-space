@@ -8,9 +8,11 @@
     .main__right-box
       = link_to "Edit","#"
   
-  .messages
+  .main__messages
   = render @messages
-  
+    .main__messages__next
+    .main__messages__nexts
+
   .main__bar
     .form
       = form_for [@group, @message] do |f|
@@ -20,14 +22,4 @@
             = f.label :image, class: 'bigs__mask__image' do
               = icon('fas', 'image', class: 'icon')
               = f.file_field :image, class: 'hidden'
-        = f.submit 'Send', class: 'form__submit'
-
-    -# .form
-      -# = form_for [@group, @message] do |f|
-      -#   bigs
-      -#     = f.text_field :content, class: 'form__message', placeholder: 'type a message'
-      -#     .form__mask
-      -#       = f.label :image, class: 'form__mask__image' do
-      -#         = icon('fas', 'image', class: 'icon')
-      -#         = f.file_field :image, class: 'hidden'
-      -#   = f.submit 'Send', class: 'form__submit'
+        = f.submit 'Send', class: 'form__submit' 
