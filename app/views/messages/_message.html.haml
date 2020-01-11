@@ -1,11 +1,11 @@
-.message
-  .upper-message
-    .upper-message__user-name
+.main__list
+  .main__list__next
+    .listo
       = message.user.name
-    .upper-message__date
+    .listoo
       = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
-  .lower-message
+  .main__list__nexts
     - if message.content.present?
-      %p.lower-message__content
+      .lis
         = message.content
     = image_tag message.image.url, class: 'lower-message__image' if message.image.present?

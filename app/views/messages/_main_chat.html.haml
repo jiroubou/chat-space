@@ -9,13 +9,12 @@
       = link_to "Edit","#"
   
   .main__messages
-  = render @messages
-    .main__messages__next
-    .main__messages__nexts
+    = render @messages
 
   .main__bar
     .form
       = form_for [@group, @message] do |f|
+        .new_message
         .bigs
           = f.text_field :content, class: 'bigs__message', placeholder: 'type a message'
           .bigs__mask
