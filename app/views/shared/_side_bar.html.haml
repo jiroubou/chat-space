@@ -16,8 +16,8 @@
   .side__list
     - current_user.groups.each do |s|
       .side__list__in
-        = link_to '#', class: 'lists' do
+        = link_to group_messages_path(s) do   
           .lists__name
             = s.name
           .lists__message
-            メッセージはまだない
+            = s.show_last_message

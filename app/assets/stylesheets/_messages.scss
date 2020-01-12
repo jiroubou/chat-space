@@ -71,18 +71,20 @@
 
       &__in{
         padding: 20px;
-        .lists{
-          color: white;
-          text-decoration: none;
 
+        .lists{
+ 
           &__name {
-            font-size: 15px;
-            margin-bottom: 5px;
-            font-weight: bold;
+          font-size: 15px;
+          margin-bottom: 5px;
+          font-weight: bold;
+          color: white;
           }
+        
           &__message {
           font-size: 10px;
           margin-bottom: 40px;
+          color: white;
           }
         }
       }  
@@ -137,7 +139,7 @@
       
     }
 
-    &__list {
+    &__messages {
       background-color: #fafafa;
       height: calc(100vh - 190px);
       width: calc(100vw - 300px);
@@ -159,10 +161,10 @@
 
       &__nexts{
         margin-bottom: 46px;
-          .lis {
-            color: #454a54;
-            font-size: 14px;
-          }
+        .lis {
+          color: #454a54;
+          font-size: 14px;
+        }
       }
     }
 
@@ -174,35 +176,38 @@
       justify-content: space-around;
       align-items: center;
 
-      &__big {
+      .form {
         height: 50px;
         width: 90%;
-        display: flex;
-        
-      }
+
+        .new_message {
+          display: flex;
+        }
+
         .bigs {
           height: 50px;
-          width: 100%;
+          width: calc(100vw - 480px);
           background-color: white;
-          position: relative; 
-        }
-          .big2 {
+          position: relative;
+          display: flex; 
+
+          &__message {
             height: 50px;
-            width: 100%;
-            
             padding: 0 40px 0 10px;
+            width: 100%;
           }
-            .gyazo{
-              font-size: 1.3rem;
-              position: absolute;
-              right: 10px;
-              padding-top: 10px;
-                input{
-                  display: none;
-                }
+          &__mask{
+            font-size: 1.3rem;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            .hidden{
+              display: none;
             }
+          }
+        }
            
-        .right-right {
+        &__submit {
           height: 50px;
           width: 100px;
           background-color: #38aef0;
@@ -212,7 +217,7 @@
           justify-content: center;
           align-items: center;
         }
-        
+      }
     }
   }
 }
