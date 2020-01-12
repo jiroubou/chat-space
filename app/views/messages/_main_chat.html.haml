@@ -1,10 +1,13 @@
 .main
   .main__chat
     .main__left-box
-      .groups test
+      .groups
+        = @group.name
       .id
         .id__left-id member: 
-        .id__right-id jiro
+        .id__right-id
+          - @group.users.each do |user|
+            = user.name
     .main__right-box
       = link_to "Edit","#"
   
