@@ -2,17 +2,17 @@ $(function(){
   function buildHTML(message){
    if ( message.image ) {
      var html =
-      `<div class="message" data-message-id=${message.id}>
-         <div class="upper-message">
-           <div class="upper-message__user-name">
+      `<div class="main__list" data-message-id=${message.id}>
+         <div class="main__list__next">
+           <div class="listo">
              ${message.user_name}
            </div>
-           <div class="upper-message__date">
+           <div class="listoo">
              ${message.created_at}
            </div>
          </div>
-         <div class="lower-message">
-           <p class="lower-message__content">
+         <div class="main__list__nexts">
+           <p class="lis">
              ${message.content}
            </p>
          </div>
@@ -21,17 +21,17 @@ $(function(){
      return html;
    } else {
      var html =
-      `<div class="message" data-message-id=${message.id}>
-         <div class="upper-message">
-           <div class="upper-message__user-name">
+      `<div class="main__list" data-message-id=${message.id}>
+         <div class="main__list__next">
+           <div class="listo">
              ${message.user_name}
            </div>
-           <div class="upper-message__date">
+           <div class="listoo">
              ${message.created_at}
            </div>
          </div>
-         <div class="lower-message">
-           <p class="lower-message__content">
+         <div class="main__list__nexts">
+           <p class="lis">
              ${message.content}
            </p>
          </div>
@@ -53,10 +53,10 @@ $('#new_message').on('submit', function(e){
  })
   .done(function(data){
     var html = buildHTML(data);
-    $('.messages').append(html);      
+    $('.main__messages').append(html);      
     $('form')[0].reset();
-    $('.main_messages').animate({
-      scrollTop: $('.main_messages')[0].scrollHeight},
+    $('.main__messages').animate({
+      scrollTop: $('.main__messages')[0].scrollHeight},
       10);
   })
   .fail(function() {

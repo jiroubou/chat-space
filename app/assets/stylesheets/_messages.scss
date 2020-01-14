@@ -68,6 +68,7 @@
     &__list {
       background-color: #2f3e51;
       height: calc(100vh - 100px);
+      overflow: auto;
 
       &__in{
         padding: 20px;
