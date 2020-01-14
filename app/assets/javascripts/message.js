@@ -55,9 +55,10 @@ $('#new_message').on('submit', function(e){
     var html = buildHTML(data);
     $('.main__messages').append(html);      
     $('form')[0].reset();
-    $('.main__messages').animate({
-      scrollTop: $('.main__messages')[0].scrollHeight},
-      10);
+    $('.main__messages').animate({ scrollTop: $('.main__messages')[0].scrollHeight});
+    $('.form__submit').prop('disabled', false);
+    // console.log("aa");
+    // $('input').removeAttr('disabled');
   })
   .fail(function() {
     alert("メッセージ送信に失敗しました");
