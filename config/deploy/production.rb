@@ -59,4 +59,4 @@
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
 #   }
-server '<用意したElastic IP>', user: 'ec2-user', roles: %w{app db web}
+server '3.114.253.165', user: 'ec2-user', roles: %w{app db web}
