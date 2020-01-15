@@ -4,12 +4,12 @@
       .groups
         = @group.name
       .id
-        .id__left-id member: 
+        .id__left-id member：
         .id__right-id
           - @group.users.each do |user|
             = user.name
     .main__right-box
-      = link_to "Edit", edit_group_path(@group)
+      = link_to "Edit", edit_group_path(@group), class: "send"
       
   .main__messages
     = render @messages

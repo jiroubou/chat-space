@@ -1,7 +1,6 @@
 .side
   .side__bar
-    .side__bar__box
-      .name 名前
+    .side__bar__box 
       = current_user.name
       .icons
         = link_to new_group_path do
@@ -16,7 +15,7 @@
   .side__list
     - current_user.groups.each do |s|
       .side__list__in
-        = link_to group_messages_path(s) do   
+        = link_to group_messages_path(s),class: "oioi" do   
           .lists__name
             = s.name
           .lists__message
