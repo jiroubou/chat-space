@@ -68,6 +68,7 @@
     &__list {
       background-color: #2f3e51;
       height: calc(100vh - 100px);
+      overflow: auto;
 
       &__in{
         padding: 20px;
@@ -145,6 +146,7 @@
       width: calc(100vw - 300px);
       padding-top: 35px;
       padding-left: 40px;
+      overflow: auto;
 
       &__next{
         display: flex;
