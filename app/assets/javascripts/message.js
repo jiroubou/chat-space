@@ -2,21 +2,21 @@ $(function(){
   var buildHTML = function(message) {
     if (message.content && message.image) {
       //data-idが反映されるようにしている
-      var html = `<div class="main__list" data-message-id=` + message.id + `>` +
-        `<div class="main__list__next">` +
-          `<div class="listo">` +
-            message.user_name +
-          `</div>` +
-          `<div class="listoo">` +
-            message.created_at +
-          `</div>` +
-        `</div>` +
-        `<div class="main__list__nexts">` +
-          `<p class="lis">` +
-            message.content +
-          `</p>` +
-          `<img src="` + message.image + `" class="message" >` +
-        `</div>` +
+      var html = `<div class="main__list" data-message-id=` + message.id + `>` 
+        `<div class="main__list__next">` 
+          `<div class="listo">` 
+            message.user_name 
+          `</div>` 
+          `<div class="listoo">` 
+            message.created_at 
+          `</div>` 
+        `</div>` 
+        `<div class="main__list__nexts">` 
+          `<p class="lis">` 
+            message.content 
+          `</p>` 
+          `<img src="` + message.image + `" class="message" >` 
+        `</div>` 
       `</div>`
     } else if (message.content) {
       //同様に、data-idが反映されるようにしている
