@@ -15,7 +15,7 @@ $(function(){
           <p class="lis">
             ${message.content} 
           </p>
-          <img src= ${message.image}  class="message"> 
+          <img src= ${message.image}  class="lower-message__image"> 
         </div>
       </div>`
     } else if (message.content) {
@@ -47,7 +47,7 @@ $(function(){
           </div>
         </div>
         <div class="main__list__nexts">
-          <img src=message.image class="lis" >
+          <img src=${message.image} class="lis" >
         </div>
       </div>`
     };
