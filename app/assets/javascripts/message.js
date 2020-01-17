@@ -47,7 +47,7 @@ $(function(){
           </div>
         </div>
         <div class="main__list__nexts">
-          <img src=message.image class="lis" >
+          <img src=${message.image} class="lis" >
         </div>
       </div>`
     };
